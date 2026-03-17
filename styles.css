@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: url('bg.jpg');
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    flex-direction: column;
+}
+#scoreBox{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#board{
+ background: linear-gradient(rgb(167, 238, 167), rgb(240, 240, 169));
+ width: 90vmin;
+ height: 92vmin;
+ border: 2px solid black;
+ display: grid;
+ grid-template-columns: repeat(18, 1fr);
+ grid-template-rows: repeat(18, 1fr);
+}
+
+.snake{
+    background-color: purple;
+}
+
+.head{
+    background-color: red;
+}
+.food{
+    background-color:yellow;
+
+}
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #1a401b;
+    color: white;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+#restartBtn {
+    background-color: #f44336;
+}
+/* Mobile / Small screens */
+@media (max-width: 768px) {
+    .body {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        padding-top: 60px; 
+    }
+
+    #scoreBox {
+        font-size: 16px;
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+    }
+
+    #board {
+        width: 95vmin;
+        height: 95vmin;
+        border-width: 1.5px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 8px;
+    }
+}
+
+/* Extra small screens / portrait phones */
+@media (max-width: 480px) {
+    #scoreBox {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    #board {
+        width: 90vmin;
+        height: 90vmin;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+/* Extra-large screens (1200px and above) */
+@media (min-width: 1200px) {
+    #board {
+        width: 70vmin;  
+        height: 72vmin;
+        border-width: 2px;
+    }
+
+    #scoreBox {
+        font-size: 24px;
+        top: 30px;
+        right: 50px;
+        padding: 12px 18px;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+}
+
+/* Medium-large screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #board {
+        width: 80vmin;
+        height: 82vmin;
+    }
+
+    #scoreBox {
+        font-size: 22px;
+        top: 25px;
+        right: 40px;
+        padding: 10px 15px;
+    }
+
+    button {
+        padding: 10px 22px;
+        font-size: 16px;
+    }
+}
